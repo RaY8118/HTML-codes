@@ -5,20 +5,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@1&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <style>
-            #begintbn{
-                padding: 5px;
-                font-size: 15px;
-                border-radius: 5px;
-                background-color: rgb(158,235,71);
-                text-transform: capitalize;
-                text-decoration: none;
-            }
-            #begintbn.hover{
-                background-position: 200px 0;
-            }
             head{
                 color:white;
             }
@@ -34,39 +24,120 @@
                 border-width:2.7px;
                 background-color:#484f58;
                 font-family: 'Sanchez', serif;
+                border-radius: 25px;
+                transition: width 2s ,height 4s;
             }
+            
             #candidate2{
                 text-align:"float : left";
                 border-width:2.7px;
                 background-color: #484f58;
                 font-family: 'Sanchez', serif;
+                border-radius: 25px;
             }
             #candidate3{
                 text-align:"float : left";
                 border-width:2.7px;
                 background-color: #484f58;
                 font-family: 'Sanchez', serif;
+                border-radius: 25px;
             }
             #candidate4{
                 text-align:"float : left";
                 border-width:2.7px;
                 background-color: #484f58;
                 font-family: 'Sanchez', serif;
+                border-radius: 25px;
+            }
+            .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            transition: width 1.5s;
+            }
+            .button:hover{
+                width: 220px;
+            }
+
+            .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+            .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+            .button:hover span {
+            padding-right: 25px;
+            }
+
+            .button:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
+            .arrow-highlight{
+            position:relative;
+            margin:0 0.5em;
+            padding:0 0.2em;
+            }
+            .arrow-highlight:before{
+            content:"";
+            z-index:-1;
+            left:-0.5em;
+            top:0.1em;
+            border-width:0.5em;
+            border-style:solid;
+            border-color:orange;
+            position:absolute;
+            width:calc(100% - 0.5em);
+            border-left-color:transparent;
+            }
+
+            .arrow-highlight:after{
+            content:"";
+            z-index:-1;
+            right:0;
+            top:0.1em;
+            border-width:0.5em;
+            border-style:solid;
+            border-color:orange;
+            position:absolute;
+            border-top-color:transparent;
+            border-bottom-color:transparent;
+            border-left-color:transparent;
+            transform:rotate(180deg);
+            transform-origin:center right;
             }
 
         </style>
         <center>
             <h1 style = "color :white;" text-align:"center;" ><u>Candidates Information</u></h1>
         </center>
-
+        
         <fieldset id="candidate1"><legend><h2 style="color:white;">Candidate 1:</h2></legend>
-            <img style="float : left" src ="candidate3.jpg",alt="candidate3.jpg"height="125" width="125"> 
+            <img style="float : left" src ="candidate3.jpg",alt="candidate3.jpg"height="125" width="125" > 
 
             <div>
 
-                <b style = "color:white;" >&nbsp Name : </b><b style="color:#c9d1d9;">                Govind Choudhary      </b><br>
-                <b style = "color:white;" >&nbsp Division : </b><b style="color:#c9d1d9;">            SE2                   </b><br>
-                <b style = "color:white;" >&nbsp Branch : </b><b style="color:#c9d1d9;">              ECS                   </b><br>
+                <b style = "color:white;" >&nbsp Name : </b><b style="color:#c9d1d9;" >                Govind Choudhary      </b><br>
+                <b style = "color:white;" >&nbsp Division : </b><b style="color:#c9d1d9;" >            SE2                   </b><br>
+                <b style = "color:white;" >&nbsp Branch : </b><b style="color:#c9d1d9;" >              ECS                   </b><br>
 
             </div>
             
@@ -92,7 +163,7 @@
             
             <div>
                 
-                <b style = "color:white;" >&nbsp Name : </b><b style="color:#c9d1d9;">                 Rushikesh Gaikwad    </b><br>
+                <b style = "color:white;" >&nbsp Name : </b><b style="color:#c9d1d9;" >                 Rushikesh Gaikwad    </b><br>
                 <b style = "color:white;" >&nbsp Division : </b><b style="color:#c9d1d9;">             SE2                  </b><br>
                 <b style = "color:white;" >&nbsp Branch : </b><b style="color:#c9d1d9;">               ECS                  </b><br>
                 
@@ -108,12 +179,11 @@
                 
                 <b style = "color:white;" >&nbsp Name : </b><b style = "color:#c9d1d9;">                    Parth Ghadi         </b><br>
                 <b style = "color:white;" >&nbsp Division : </b><b style = "color:#c9d1d9;">                SE2                 </b><br>
-                <b style = "color:white;" >&nbsp Branch : </b><b style = "color:#c9d1d9;">                  ECS                 </b><br>
+                <b style = "color:white;" >&nbsp Branch : </b><b style = "color:#c9d1d9;">                  ECS                 </b>
                 
             </div>
             
         </fieldset><br>
-        
         <center>
             
             <b><h2 style="color:#3fb950";text-align:"center;", id="blink">Click here to proceed</h2></b>
@@ -121,10 +191,9 @@
                 var blink = document.getElementById('blink');
                 setInterval(function() {
                     blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-                }, 1500);
+                }, 500);
             </script>
-            <a href="../routes/dashboard.php" ><button id="begintbn" >Proceed</button></a>
-            
+            <a href="../routes/dashboard.php" ><button class ="button"> <span>Proceed</span></button></a>
         </center>
         
     </body>
